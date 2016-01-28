@@ -11,13 +11,5 @@ module.exports = function (app, express) {
   // parse application/x-www-form-urlencoded and application/json
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
-  
-  //logger
   app.use(logger);
-  app.use( function (req, res, next) {
-    console.log('Received ' + req.method + ' from ' + req.path);
-    next();
-  });
-
-
 };

@@ -10,6 +10,7 @@ angular.module('app.services', [])
   var currentPosition = {};
 
   var getFBdata = function (val) {
+    console.log(val);
     storage.push(val);
   };
 
